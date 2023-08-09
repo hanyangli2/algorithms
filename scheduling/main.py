@@ -43,6 +43,7 @@ def BFS(g, start, end, parent):
                     return True
     return False
 
+
 while not end:
     if r == 0 and c == 0 and n == 0:
         break
@@ -98,7 +99,7 @@ while not end:
             graph[course_node][len(graph) - 1] = cap
 
     print('\n'.join([''.join(['{:4}'.format(item) for item in row])
-    for row in graph]))
+                     for row in graph]))
 
     input()
     if Ford_Fulkerson(graph, 0, len(graph) - 1) >= n * num_people:
@@ -110,4 +111,3 @@ while not end:
     r = int(r)
     c = int(c)
     n = int(n)
-
